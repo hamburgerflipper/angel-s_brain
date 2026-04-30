@@ -8,8 +8,15 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         @keyframes flash {
-            0%, 100% { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
-            50%       { color: #ffffff; text-shadow: 0 0 10px #ffffff; }
+            0%   { color: #ff0000; text-shadow: 0 0 8px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff4400; opacity: 1; }
+            4%   { color: #cc0000; text-shadow: none; opacity: 0.6; }
+            6%   { color: #ff0000; text-shadow: 0 0 8px #ff0000, 0 0 20px #ff0000; opacity: 1; }
+            8%   { color: #cc0000; text-shadow: none; opacity: 0.5; }
+            10%  { color: #ff0000; text-shadow: 0 0 8px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff4400; opacity: 1; }
+            60%  { color: #ff0000; text-shadow: 0 0 8px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff4400; opacity: 1; }
+            62%  { color: #cc0000; text-shadow: none; opacity: 0.55; }
+            64%  { color: #ff0000; text-shadow: 0 0 8px #ff0000, 0 0 20px #ff0000; opacity: 1; }
+            100% { color: #ff0000; text-shadow: 0 0 8px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff4400; opacity: 1; }
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(16px); }
@@ -25,7 +32,7 @@
         #homePage { display: none; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; text-align: center; flex-direction: column; }
         #homePage.active { display: flex; }
 
-        .home-title { font-family: 'Courier New', monospace; font-size: 5rem; font-weight: bold; letter-spacing: 4px; animation: flash 0.6s infinite; margin-bottom: 80px; }
+        .home-title { font-family: 'Courier New', monospace; font-size: 5rem; font-weight: bold; letter-spacing: 4px; animation: flash 5s infinite; margin-bottom: 80px; }
         .menu { display: flex; flex-direction: column; gap: 0; align-items: center; margin-bottom: 100px; }
         .menu-item { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 6rem; font-weight: 900; letter-spacing: 3px; color: #ffffff; cursor: pointer; transition: opacity 0.3s; line-height: 1.1; background: none; border: none; }
         .menu-item:hover { opacity: 0.7; }
@@ -40,7 +47,7 @@
         .sidebar-title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 5rem; font-weight: 900; letter-spacing: 3px; color: #ffffff; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); line-height: 1.1; }
         .cat-main { margin-left: 200px; width: calc(100% - 200px); padding: 40px; }
         .cat-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; max-width: 1200px; }
-        .cat-logo { font-family: 'Courier New', monospace; font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; animation: flash 0.6s infinite; cursor: pointer; background: none; border: none; color: #ff0000; }
+        .cat-logo { font-family: 'Courier New', monospace; font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; animation: flash 5s infinite; cursor: pointer; background: none; border: none; color: #ff0000; }
         .home-btn { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; font-weight: 700; color: #ffffff; cursor: pointer; padding: 10px 20px; border: 2px solid #ffffff; background: transparent; transition: opacity 0.3s; }
         .home-btn:hover { opacity: 0.7; }
 
@@ -81,7 +88,7 @@
         /* ─── WRITE PAGE ─── */
         #loginScreen { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
         .login-box { width: 100%; max-width: 420px; animation: fadeIn 0.4s ease; }
-        .login-logo { font-family: 'Courier New', monospace; font-size: 2rem; font-weight: bold; letter-spacing: 3px; animation: flash 0.6s infinite; margin-bottom: 10px; display: block; cursor: pointer; background: none; border: none; color: #ff0000; text-align: left; }
+        .login-logo { font-family: 'Courier New', monospace; font-size: 2rem; font-weight: bold; letter-spacing: 3px; animation: flash 5s infinite; margin-bottom: 10px; display: block; cursor: pointer; background: none; border: none; color: #ff0000; text-align: left; }
         .login-sub { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 4px; color: #666; text-transform: uppercase; margin-bottom: 50px; }
         .login-label { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 3px; color: #888; text-transform: uppercase; display: block; margin-bottom: 8px; }
         .login-input { width: 100%; padding: 14px 0; background: transparent; border: none; border-bottom: 1px solid #333; color: #ffffff; font-family: 'Courier New', monospace; font-size: 1rem; outline: none; transition: border-color 0.3s; margin-bottom: 30px; }
@@ -95,7 +102,7 @@
 
         #writeScreen { display: none; min-height: 100vh; }
         .top-bar { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; border-bottom: 1px solid #2a2a2a; }
-        .top-logo { font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: bold; letter-spacing: 2px; animation: flash 0.6s infinite; cursor: pointer; background: none; border: none; color: #ff0000; }
+        .top-logo { font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: bold; letter-spacing: 2px; animation: flash 5s infinite; cursor: pointer; background: none; border: none; color: #ff0000; }
         .top-right { display: flex; align-items: center; gap: 20px; }
         .user-badge { font-family: 'Courier New', monospace; font-size: 0.75rem; color: #555; letter-spacing: 1px; }
         .write-logout-btn { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; color: #555; background: none; border: 1px solid #333; padding: 6px 14px; cursor: pointer; text-transform: uppercase; transition: all 0.2s; }
@@ -128,6 +135,22 @@
         .success-banner.show { display: block; }
         .section-divider { border: none; border-top: 1px solid #2a2a2a; margin: 40px 0; }
         #reviewFieldsBlock { display: none; }
+
+        /* ─── MANAGE REVIEWS (write page) ─── */
+        .manage-reviews-section { margin-top: 60px; }
+        .manage-reviews-heading { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 2rem; font-weight: 900; letter-spacing: 2px; color: #ffffff; margin-bottom: 8px; }
+        .manage-reviews-sub { font-family: 'Courier New', monospace; font-size: 0.8rem; color: #555; letter-spacing: 2px; margin-bottom: 30px; }
+        .manage-review-item { border-bottom: 1px solid #2a2a2a; padding: 20px 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; animation: fadeIn 0.3s ease; }
+        .manage-review-item:last-child { border-bottom: none; }
+        .manage-review-info { flex: 1; }
+        .manage-review-title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; font-weight: 900; letter-spacing: 1px; color: #ffffff; margin-bottom: 4px; }
+        .manage-review-meta { font-family: 'Courier New', monospace; font-size: 0.75rem; color: #555; letter-spacing: 1px; }
+        .manage-delete-btn { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; color: #ff0000; background: none; border: 1px solid #ff0000; padding: 7px 14px; cursor: pointer; text-transform: uppercase; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; }
+        .manage-delete-btn:hover { background-color: #ff0000; color: #ffffff; }
+        .manage-no-reviews { font-family: 'Courier New', monospace; font-size: 0.85rem; color: #444; letter-spacing: 1px; padding: 20px 0; }
+        .manage-category-filter { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 25px; }
+        .filter-btn { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; color: #555; background: none; border: 1px solid #333; padding: 6px 12px; cursor: pointer; text-transform: uppercase; transition: all 0.2s; }
+        .filter-btn:hover, .filter-btn.active { border-color: #ffffff; color: #ffffff; }
 
         /* ─── MODAL ─── */
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
@@ -311,6 +334,22 @@
                 </div>
                 <div class="success-banner" id="successBanner">&#10003; Review posted successfully!</div>
             </div>
+
+            <!-- Manage existing reviews -->
+            <div class="manage-reviews-section" id="manageReviewsSection">
+                <hr class="section-divider">
+                <div class="manage-reviews-heading">MANAGE.</div>
+                <div class="manage-reviews-sub">// existing reviews</div>
+                <div class="manage-category-filter" id="manageCategoryFilter">
+                    <button class="filter-btn active" onclick="filterManageReviews('all', this)">ALL</button>
+                    <button class="filter-btn" onclick="filterManageReviews('music', this)">MUSIC</button>
+                    <button class="filter-btn" onclick="filterManageReviews('movies', this)">MOVIES</button>
+                    <button class="filter-btn" onclick="filterManageReviews('wrestling', this)">PRO-WRESTLING</button>
+                    <button class="filter-btn" onclick="filterManageReviews('fashion', this)">FASHION</button>
+                    <button class="filter-btn" onclick="filterManageReviews('tech', this)">TECH</button>
+                </div>
+                <div id="manageReviewsList"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -345,26 +384,15 @@ function goCategory(cat) {
     currentCategory = cat;
     const labels = { music: 'MUSIC', movies: 'MOVIES', wrestling: 'PRO-WRESTLING', fashion: 'FASHION', tech: 'TECH' };
     document.getElementById('sidebarTitle').textContent = labels[cat] || cat.toUpperCase();
-
-    catLoggedIn = localStorage.getItem('catLoggedIn') === 'true';
-    if (catLoggedIn) {
-        document.getElementById('currentUserDisplay').textContent = 'Logged in as: angel';
-        document.getElementById('addReviewSection').classList.add('show');
-        setCatFormLabels(cat);
-    } else {
-        document.getElementById('addReviewSection').classList.remove('show');
-    }
-
+    document.getElementById('addReviewSection').classList.remove('show');
     loadCategoryReviews();
     showPage('categoryPage');
 }
 
 function goWrite() {
-    const loggedIn = localStorage.getItem('writeLoggedIn') === 'true';
-    document.getElementById('loginScreen').style.display = loggedIn ? 'none' : 'flex';
-    document.getElementById('writeScreen').style.display = loggedIn ? 'block' : 'none';
-    document.getElementById('loginPassword').value = '';
-    document.getElementById('loginError').textContent = '';
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('writeScreen').style.display = 'block';
+    loadManageReviews('all');
     showPage('writePage');
 }
 
@@ -387,18 +415,11 @@ function setCatFormLabels(cat) {
     document.getElementById('catDate').valueAsDate        = new Date();
 }
 
-function openCatModal() {
-    document.getElementById('catPassword').value = '';
-    document.getElementById('catLoginError').textContent = '';
-    document.getElementById('catLoginModal').classList.add('show');
-    setTimeout(() => document.getElementById('catPassword').focus(), 100);
-}
+document.querySelector('.cat-logo').addEventListener('click', function() { goHome(); });
+
+function openCatModal() {} // unused - login no longer required to view pages
 function closeCatModal() { document.getElementById('catLoginModal').classList.remove('show'); }
-document.getElementById('catPassword').addEventListener('keydown', e => { if (e.key === 'Enter') doCatLogin(); });
-document.querySelector('.cat-logo').addEventListener('click', function() {
-    if (!catLoggedIn) openCatModal();
-    else document.getElementById('addReviewSection').classList.add('show');
-});
+function attemptLogin() {} // unused - write page no longer requires login
 
 function doCatLogin() {
     if (document.getElementById('catPassword').value === 'pogchamp07') {
@@ -435,6 +456,9 @@ function submitCatReview() {
     if (!artist) { alert('Please fill in the ' + (catConfig[currentCategory]?.artistLabel || 'artist') + ' field.'); return; }
     if (!date)   { alert('Please select a date.'); return; }
     if (!text)   { alert('Please write your review.'); return; }
+    const pw = prompt('Enter password to post review:');
+    if (pw === null) return;
+    if (pw !== 'pogchamp07') { alert('Incorrect password.'); return; }
     const btn = document.getElementById('catSubmitBtn');
     btn.disabled = true; btn.textContent = 'POSTING...';
     try {
@@ -488,29 +512,26 @@ const writeConfig = {
     tech:      { titleLabel: 'PRODUCT / DEVICE',    titlePh: 'e.g., iPhone 15 Pro',      artistLabel: 'BRAND',                    artistPh: 'e.g., Apple',             textPh: 'Performance, design, value for money — give your honest take...' },
 };
 
-function attemptLogin() {
-    const pw = document.getElementById('loginPassword').value;
-    if (!pw) { document.getElementById('loginError').textContent = 'please enter the password'; return; }
-    if (pw === 'pogchamp07') {
-        localStorage.setItem('writeLoggedIn', 'true');
-        document.getElementById('loginScreen').style.display = 'none';
-        document.getElementById('writeScreen').style.display = 'block';
-    } else {
-        document.getElementById('loginError').textContent = 'incorrect password';
-        document.getElementById('loginPassword').value = '';
-    }
-}
-document.getElementById('loginPassword').addEventListener('keydown', e => { if (e.key === 'Enter') attemptLogin(); });
-
 function doWriteLogout() {
-    localStorage.removeItem('writeLoggedIn');
-    document.getElementById('writeScreen').style.display = 'none';
-    document.getElementById('loginScreen').style.display = 'flex';
-    document.getElementById('writeCategorySelect').value = '';
-    document.getElementById('reviewFieldsBlock').style.display = 'none';
+    // no-op, kept for compatibility
 }
 
 function onWriteCategoryChange() {
+    const cat = document.getElementById('writeCategorySelect').value;
+    const block = document.getElementById('reviewFieldsBlock');
+    if (!cat) { block.style.display = 'none'; return; }
+    const c = writeConfig[cat];
+    document.getElementById('wTitleLabel').textContent  = c.titleLabel;
+    document.getElementById('wTitle').placeholder       = c.titlePh;
+    document.getElementById('wArtistLabel').textContent = c.artistLabel;
+    document.getElementById('wArtist').placeholder      = c.artistPh;
+    document.getElementById('wText').placeholder        = c.textPh;
+    clearWriteForm();
+    block.style.display = 'block';
+    document.getElementById('wDate').valueAsDate = new Date();
+}
+
+function clearWriteForm() {
     const cat = document.getElementById('writeCategorySelect').value;
     const block = document.getElementById('reviewFieldsBlock');
     if (!cat) { block.style.display = 'none'; return; }
@@ -542,6 +563,9 @@ function submitWriteReview() {
     if (!artist) { alert('Please fill in the ' + (writeConfig[cat]?.artistLabel || 'artist') + ' field.'); return; }
     if (!date)   { alert('Please select a date.'); return; }
     if (!text)   { alert('Please write your review.'); return; }
+    const pw = prompt('Enter password to post review:');
+    if (pw === null) return;
+    if (pw !== 'pogchamp07') { alert('Incorrect password.'); return; }
     const btn = document.getElementById('wSubmitBtn');
     btn.disabled = true; btn.textContent = 'Posting...';
     try {
@@ -553,8 +577,50 @@ function submitWriteReview() {
         document.getElementById('reviewFieldsBlock').style.display = 'none';
         document.getElementById('successBanner').classList.add('show');
         setTimeout(() => document.getElementById('successBanner').classList.remove('show'), 4000);
+        loadManageReviews(currentManageFilter);
     } catch(e) { alert('Error: ' + e.message); }
     finally { btn.disabled = false; btn.textContent = 'Post Review'; }
+}
+
+let currentManageFilter = 'all';
+
+function loadManageReviews(filter) {
+    currentManageFilter = filter || 'all';
+    const list = document.getElementById('manageReviewsList');
+    if (!list) return;
+    let reviews = getReviews();
+    if (currentManageFilter !== 'all') reviews = reviews.filter(r => r.category === currentManageFilter);
+    if (reviews.length === 0) {
+        list.innerHTML = '<div class="manage-no-reviews">// no reviews found</div>';
+        return;
+    }
+    list.innerHTML = '';
+    reviews.forEach(r => {
+        const item = document.createElement('div');
+        item.className = 'manage-review-item';
+        const catLabel = { music:'MUSIC', movies:'MOVIES', wrestling:'PRO-WRESTLING', fashion:'FASHION', tech:'TECH' }[r.category] || r.category.toUpperCase();
+        item.innerHTML =
+            '<div class="manage-review-info">' +
+                '<div class="manage-review-title">' + r.title + '</div>' +
+                '<div class="manage-review-meta">' + r.artist + ' &bull; ' + catLabel + ' &bull; ' + r.date + '</div>' +
+            '</div>' +
+            '<button class="manage-delete-btn" onclick="deleteReviewFromWrite(' + r.id + ')">Delete</button>';
+        list.appendChild(item);
+    });
+}
+
+function filterManageReviews(filter, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+    loadManageReviews(filter);
+}
+
+function deleteReviewFromWrite(id) {
+    const pw = prompt('Enter password to delete:');
+    if (pw === null) return;
+    if (pw !== 'pogchamp07') { alert('Incorrect password.'); return; }
+    saveReviews(getReviews().filter(r => r.id !== id));
+    loadManageReviews(currentManageFilter);
 }
 
 function clearWriteForm() {
